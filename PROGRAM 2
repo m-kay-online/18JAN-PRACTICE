@@ -1,0 +1,47 @@
+Create a class called "Car" with the following private member variables:
+	make (string)
+	model (string)
+	year (int)
+	speed (int)
+The class should have the following public member functions:
+	A constructor that sets the make, model, and year.
+	A function called "accelerate" that increases the speed by 10.
+	A function called "brake" that decreases the speed by 7.
+	A function called "getSpeed" that returns the current speed of the car.
+	A function called "getMakeModel" that returns the make and model of the car as a string in the format "Make Model".
+In main function, create an instance of the Car class and set its make, model, and year. Then use the accelerate function to increase the speed by 10 and brake function to decrease the speed by 7. Print the current speed of the car using the getSpeed function and print the make and model using the getMakeModel function.
+
+
+#include <iostream>
+using namespace std;
+class Car {
+    private:
+        string make, model;
+        int year, speed;
+
+    public:
+        Car(string m, string mo, int y) 
+        {make=m; model=mo; year=y; speed=0;}
+        void accelerate() { speed += 10; }
+        void brake() { speed -= 7; }
+        int getSpeed() { return speed; }
+        string getMakeModel() { return make + " " + model; }
+};
+
+int main() {
+    Car myCar("Toyota", "Camry", 2020); //0
+    myCar.accelerate();
+    myCar.accelerate();
+    myCar.accelerate();//+10=10
+    myCar.accelerate();//+10=20
+    myCar.brake();//-7=13
+    cout << "Current speed: " << myCar.getSpeed() << endl;
+    cout << "Make and model: " << myCar.getMakeModel() << endl;
+    return 0;
+}
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Secu
