@@ -1,0 +1,26 @@
+Program to reverse character Array
+
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int n;///No of Elements
+    cout<<"Enter no of elements:- ";
+    cin>>n;
+
+    cout<<"\nEnter elements: ";
+
+    char arr[n];///Entering elements to First Array
+    for(int i=1; i<=n; i++){  
+    cout<<i<<". ";cin>>arr[i];
+    }
+     
+     cout<<"Elements of arr array in reverse: { ";///Showing Number of Elements
+    for(int j=n; j>=1; j--){
+       
+    cout<<arr[j];if(j>1){cout<<", ";}if(j==1){cout<<"}";}
+        
+    }
+
+}
